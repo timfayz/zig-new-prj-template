@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "zig: build current file tests",
+      "type": "shell",
+      "command": "zig",
+      "args": [
+        "test",
+        "--test-no-exec",
+        "-femit-bin=zig-out/test/${fileBasenameNoExtension}",
+        "${file}"
+      ]
+    },
+    {
+      "label": "zig: build current file",
+      "type": "shell",
+      "command": "zig",
+      "args": [
+        "build-exe",
+        "-femit-bin=zig-out/bin/${fileBasenameNoExtension}",
+        "${file}"
+      ]
+    }
+  ]
+}

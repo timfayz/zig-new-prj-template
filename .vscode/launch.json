@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "zig: debug current file tests",
+      "program": "${workspaceFolder}/zig-out/test/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "zig: build current file tests"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "zig: debug current file",
+      "program": "${workspaceFolder}/zig-out/bin/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "zig: build current file"
+    }
+  ]
+}
